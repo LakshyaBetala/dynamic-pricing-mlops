@@ -20,15 +20,15 @@ surge = np.ones(n_orders)
 # --- YOUR TASK: FILL IN THE LOGIC BELOW ---
 
 # Rule 1: If weather is Rain (1), add 0.1 to surge. Else keep surge as is.
-surge = np.where(weather == 1, surge + 0.2, surge)
+surge = np.where(weather == 1, surge + 0.1, surge)
 
-# Rule 2: If weather is Storm (2), add 0.1 to surge. 
+# Rule 2: If weather is Storm (2), add 0.05 to surge. 
 # Write the line below using np.where
-surge = np.where(weather == 2, surge + 0.1, surge)
+surge = np.where(weather == 2, surge + 0.05, surge)
 # <--- WRITE THIS LINE
 
-# Rule 3: If it is Exam Season (1), add 0.5 to surge.
-surge = np.where(exam_season == 1, surge + 0.5, surge)
+# Rule 3: If it is Exam Season (1), add 0.3 to surge.
+surge = np.where(exam_season == 1, surge + 0.3, surge)
 # <--- WRITE THIS LINE
 
 # Rule 4: If workers are less than 20, add 0.5 to surge.
