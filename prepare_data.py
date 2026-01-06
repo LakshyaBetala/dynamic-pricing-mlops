@@ -19,12 +19,12 @@ surge = np.ones(n_orders)
 
 # --- YOUR TASK: FILL IN THE LOGIC BELOW ---
 
-# Rule 1: If weather is Rain (1), add 0.3 to surge. Else keep surge as is.
-surge = np.where(weather == 1, surge + 0.3, surge)
+# Rule 1: If weather is Rain (1), add 0.1 to surge. Else keep surge as is.
+surge = np.where(weather == 1, surge + 0.2, surge)
 
-# Rule 2: If weather is Storm (2), add 0.8 to surge. 
+# Rule 2: If weather is Storm (2), add 0.1 to surge. 
 # Write the line below using np.where
-surge = np.where(weather == 2, surge + 0.8, surge)
+surge = np.where(weather == 2, surge + 0.1, surge)
 # <--- WRITE THIS LINE
 
 # Rule 3: If it is Exam Season (1), add 0.5 to surge.
@@ -53,4 +53,4 @@ df['surge_multiplier'] = df['surge_multiplier'].round(2)
 # Save
 csv_path = "data/gig_pricing.csv"
 df.to_csv(csv_path, index=False)
-print(f"✅ Data generated at {csv_path}")
+print(f" Data generated at {csv_path}")
